@@ -1,0 +1,461 @@
+.blog-section {
+  position: relative;
+  top: 120px;
+  margin-bottom: 120px;
+
+  @include breakpoint(sm) {
+    top: 140px;
+    margin-bottom: 50px;
+  }
+
+  .blog-header-wrapper {
+    margin-bottom: 36px;
+
+    .blog-h1 {
+      text-transform: uppercase;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 64px;
+      margin-bottom: 48px;
+
+      @include breakpoint(sm) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .blog-content-wrapper {
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+
+    .blog-a {
+      display: block;
+      position: relative;
+      width: 42.5%;
+      color: #153460;
+
+      @include breakpoint(sm) {
+        width: 100%;
+      }
+    }
+
+    .image {
+      margin-bottom: 0;
+      max-height: 380px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .img-responsive {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform .5s, filter 1.5s ease-in-out;
+    }
+
+    .img-responsive:hover {
+      transform: scale(1.1);
+    }
+
+    .date {
+      display: flex;
+      padding: 15px;
+      background: #153460;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      height: 73px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+      float: left;
+      font-size: 12px;
+
+      .date-day {
+        color: #fff;
+        font-size: 48px;
+        font-weight: 900;
+        font-style: italic;
+        font-stretch: condensed;
+        margin-bottom: 0;
+      }
+
+      .date-month {
+        font-size: 13px;
+        color: #fff;
+        text-transform: none;
+        font-weight: 400;
+        line-height: 27px;
+      }
+    }
+  }
+
+  .blog-inner {
+    display: block;
+    width: 57.5%;
+    border-top: 1px solid #dbdbdb;
+    position: relative;
+    padding: 29px 27px 0px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+
+    @include breakpoint(sm) {
+      width: 100%;
+    }
+
+    .blog-link {
+      text-decoration: none;
+    }
+
+    .blog-inner-header {
+      font-size: 24px;
+      text-transform: none;
+      line-height: 30px;
+      margin-bottom: 11px;
+      letter-spacing: -0.5px;
+      color: #404040;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .blog-inner-header:hover {
+      color: $main-color;
+    }
+
+    .blog-inner-content {
+      color: #000;
+      opacity: 0.8;
+      line-height: 20px;
+
+      p {
+        line-height: 24px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #404040;
+      }
+    }
+  }
+
+  .blog-inner-footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 13px 0 0 0;
+    margin-bottom: 0;
+
+    @include breakpoint(sm) {
+      margin-bottom: 10px;
+    }
+
+    .color {
+      color: #153460;
+    }
+
+    .text-decoration {
+      text-decoration: none;
+      color: #262626;
+    }
+
+    .blog-inner-category {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 20px;
+
+      ul {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin-bottom: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    .hide-sm {
+      display: none;
+    }
+  }
+
+  .side-search {
+    margin-bottom: 30px;
+  }
+
+  .side-cat {
+    margin-bottom: 30px;
+
+    .cat-title {
+      background: #262626;
+      margin-bottom: 0;
+
+      .cat-4 {
+        margin-bottom: 20px;
+        font-weight: 400;
+        color: #fff;
+        font-size: 18px !important;
+        padding: 6px 0 4px 14px;
+        line-height: 30px !important;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+    }
+
+    .cat-item {
+      padding: 10px 0 10px 40px;
+      border-bottom: solid 1px #d8d8d8;
+      margin-bottom: 0;
+      a {
+        text-decoration: none;
+        color: #262626
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding-left: 1.3em;
+    }
+
+    li:before {
+    content: "\f101";
+    font-family: 'FontAwesome';
+    color: #f2711c;
+     display: inline-block;
+     margin-left: -1.3em;
+     width: 1.3em;
+    }
+  }
+
+  .side-tag {
+    margin-bottom: 30px;
+
+    .tag-title {
+      background: #262626;
+      margin-bottom: 0;
+
+      .tag-4 {
+        margin-bottom: 20px;
+        font-weight: 400;
+        color: #fff;
+        font-size: 18px !important;
+        padding: 6px 0 4px 14px;
+        line-height: 30px !important;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+    }
+
+    .tag-cloud {
+      padding-top: 0;
+      .tag-item {
+        font-weight: 400;
+        font-size: 13px !important;
+        border: solid 1px #cccccc;
+        padding: 0 7px 2px;
+        margin-bottom: 7px;
+        margin-right: 2px;
+        color: #404040;
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .blogshow-img {
+    margin-bottom: 10px;
+    width:100%;
+    height:auto;
+    object-fit: cover;
+  }
+
+  .blogshow-wrapper {
+    font-size: 14px;
+    color: #999999;
+    text-transform: none;
+    margin-bottom: 20px;
+    padding-bottom: 4px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0;
+    i {
+      color: #f2711c;
+    }
+  }
+
+  .blog-left {
+    margin-bottom: 11px;
+    float: left;
+    .stm-date {
+      margin-right: 20px;
+      line-height: 22px;
+      vertical-align: middle;
+      display: inline-block;
+    }
+    .stm-author {
+      vertical-align: middle;
+      line-height: 22px;
+      display: inline-block;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .blog-right {
+    margin-bottom: 11px;
+    float: right;
+    .stm-cat {
+      vertical-align: middle;
+      line-height: 22px;
+      display: inline-block;
+      a {
+        text-decoration: none;
+        color: #999999;
+      }
+    }
+  }
+
+  .right-bottom {
+    @include breakpoint(sm) {
+      float: left;
+    }
+  } 
+
+
+  .blog-content {
+    p {
+      line-height: 30px;
+      margin-bottom: 30px;
+      margin: 0 0 24px;
+      font-weight: 400;
+    }
+  }
+
+  .blog-comments {
+    margin-top: 60px;
+    @include breakpoint(sm) {
+      margin-top: 80px;
+    }
+    .comment-reply {
+      font-weight: 600;
+      color: #000000;
+      letter-spacing: -0.6px;
+      text-transform: uppercase;
+      margin-bottom: 31px;
+      font-size: 36px;
+    }
+
+    .form-group {
+      margin-bottom: 2rem;
+    }
+
+    .form-control {
+      height: 50px;
+      border: 0;
+      border-radius: 0;
+      background-color: #fff;
+    }
+
+    .form-textarea {
+      height: 212px;
+      max-height: 212px;
+      border: 0;
+      border-radius: 0;
+    }
+
+    .comment-btn {
+      background-color: $main-color;
+      border: 0;
+      min-height: 48px;
+      width: 100%;
+      color: $bg-white;
+      text-transform: uppercase;
+    }
+  }
+
+  .comments-area {
+    margin-top: 60px;
+    @include breakpoint(sm) {
+      margin-top: 100px;
+    }
+    .comments-title {
+      font-size: 36px !important;
+      font-style: italic;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #000000;
+      text-align: left;
+      background: transparent;
+      border-bottom: solid 1px #d8d8d8;
+      padding: 0 0 33px 0;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .comment-list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .comment-item {
+      list-style: none;
+      margin-top: 30px;
+      padding-left: 0;
+      padding-right: 0;
+      border-bottom: 0;
+      margin-bottom: 10px;
+
+      .comment-body {
+        border-bottom: solid 1px #d8d8d8;
+        padding-bottom: 16px;
+
+        .comment-author-image {
+          margin-right: 20px;
+          float: left;
+          @include breakpoint(sm) {
+            float: none;
+            margin: 15px 0;
+          }
+          @media screen and (min-width: 768px) and (max-width: 1024px) { 
+            margin-right: 20px;
+            float: left;
+          }
+        }
+
+        .comment-author {
+          position: relative;
+          overflow: hidden;
+          .comment-author {
+            font-size: 18px;
+            letter-spacing: 0;
+            margin-right: 25px;
+            font-weight: 700;
+            color: #151515;
+          }
+
+          p {
+            margin-top: 14px;
+            line-height: 25px; 
+            margin: 10px 0 10px 0;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<div class="navbar-section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container navbar-container">
+            <a class="bloglogo" href="/">
+                <%= image_tag "logo.png", title:"Home", alt:"Logo", class: "logo" %>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item <%= 'active' if current_page?(root_path) %>">
+                        <%= link_to 'HOME', root_path, class:"nav-link" %>
+                    </li>
+                    <li class="nav-item dropdown navdropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ABOUT US
+                        </a>
+                        <div class="dropdown-menu dropdown-wrapper" aria-labelledby="navbarDropdown">
+                            <%= link_to "ABOUT AREA SCOUTS", about_path, class:"dropdown-item"%>
+                            <%= link_to "AREA SCOUTS B.A.S.E ASSESSMENT", base_assesstment_path, class:"dropdown-item"%>
+                            <%= link_to "AREA SCOUTS ATHLETE ASSESSMENT", athlete_assesstment_path, class:"dropdown-item"%>
+                            <%= link_to "AREA SCOUTS ENDORSED PRODUCTS", "https://areascouts.shop/collections/all-products", class:"dropdown-item"%>
+                            <%= link_to "AREA SCOUTS ENDORSED TRAINING TOOLS", training_tools_path, class:"dropdown-item"%>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown navdropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            OUR TEAM
+                        </a>
+                        <div class="dropdown-menu dropdown-wrapper" aria-labelledby="navbarDropdown">
+                            <%= link_to "BOARD", board_path, class:"dropdown-item"%>
+                            <%= link_to "DIRECTORS/OPERATIONS", directors_operations_path, class:"dropdown-item"%>
+                            <%= link_to "BASEBALL", baseball_team_path, class:"dropdown-item"%>
+                            <%= link_to "SOFTBALL", softball_team_path, class:"dropdown-item"%>
+                            <%= link_to "FOOTBALL", football_team_path, class:"dropdown-item"%>
+                            <%= link_to "VOLLEYBALL", volleyball_team_path, class:"dropdown-item"%>
+                            <%= link_to "RUGBY", rugby_team_path, class:"dropdown-item"%>
+                        </div>
+                    </li>
+                    <li id="to-glow" class="nav-item to-glow">
+                        <%= link_to 'GET EVALUATED', get_evaluated_path, class:"nav-link" %>
+                    </li>
+                    <li class="nav-item <%= 'active' if current_page?(blogs_path) %>">
+                        <%= link_to 'AREA SCOUTS BLOG', blogs_path, class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to 'SHOP', "https://areascouts.shop/?ref=Scouts2020", class:"nav-link", target:"_blank" %>
+                    </li>
+                    <li class="nav-item <%= 'active' if current_page?(contact_path) %>">
+                        <%= link_to 'CONTACT US', contact_path, class:"nav-link" %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

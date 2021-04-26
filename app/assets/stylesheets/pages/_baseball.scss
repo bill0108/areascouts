@@ -1,0 +1,68 @@
+.baseball-section {
+    position: relative;
+    top: 80px;
+    margin-bottom: 150px;
+  
+    @include breakpoint(sm) {
+      top: 100px;
+      margin-bottom: 50px;
+    }
+    
+    .baseball-image-wrapper {
+      text-align: center;
+      margin: 0;
+    }
+  
+    .baseball-image-wrapper2 {
+      text-align: center;
+      margin-top: 50px;
+    }
+  
+    .baseball-header {
+      margin-bottom: 50px;
+    }
+  
+    .baseball-member-wrapper {
+      background: #fff; 
+      border-radius: 3px; 
+      border: solid #f2711c 1px; 
+      padding: 15px;
+      text-align: center;
+  
+      @include breakpoint(sm) {
+        margin-top: 15px;
+      }
+  
+      .baseball-profile-pic {
+        width: 150px; 
+        height: 150px; 
+        border-radius: 50%; 
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto;
+      }
+  
+      .baseball-p {
+        line-height: 30px;
+        font-size: 15px;
+      }
+  
+      .baseball-h4 {
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        @include breakpoint(sm) {
+          font-size: 18px;
+        }
+      }
+  
+      .baseball-h5 {
+        font-size: 24px;
+        font-weight: 900;
+        text-transform: uppercase;
+        @include breakpoint(sm) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
